@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LCAFE Esports Tournament</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <img src="images/LCAFE ESPORTS NEW LOGO.png" alt="LCAFE Logo" class="site-logo">
+    <h1>LCAFE ESPORTS</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#tournaments">Tournaments</a></li>
+        <li><a href="#membership">Membership</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+   <!-- DONATION SECTION -->
+<section id="donate">
+  <h2>Support Esports Talent Community!</h2>
+  <p>Your donation helps fund community tournaments and workshops, 
+    With your support, we can reach more schools, bring more exciting tournaments in the future, 
+    and give even young talents a chance to shine. 🎮✨
+  </p>
+  <form id="donation-form" onsubmit="submitDonation(event)">
+    <label for="donation-amount">Donation Amount (Min R20):</label>
+    <input type="number" id="donation-amount" min="20" required>
+    <button type="submit">Donate</button>
+  </form>
+  <p id="donation-message"></p>
+</section>
+
+
+  <main>
+    <!-- HOME SECTION -->
+    <section id="home">
+      <h2>Welcome to Our Esports Community</h2>
+      <p>Join us for exciting tournaments and connect with fellow gamers.</p>
+      <button><a href="#membership">Sign Up Now</a></button>
+    </section>
+
+    <!-- TOURNAMENT SECTION -->
+    <section id="tournaments">
+      <h2>Register for a Tournament</h2>
+
+      <form id="register-form" onsubmit="submitForm(event)">
+        <label for="name">Name</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+
+        <label for="school">Student/Guest/School</label>
+        <input type="text" id="school" required>
+
+        <label for="gaming">Gaming Preferences</label>
+        <input type="text" id="gaming" required>
+
+        <button type="submit">Join Now</button>
+      </form>
+
+      <h3>Upcoming Tournament</h3>
+      <ul>
+        <li>
+          Township Clash - 28 June 2025
+          <button type="button" onclick="openModal()">Register</button>
+        </li>
+      </ul>
+
+      <h3>Past Tournaments</h3><section id="gallery">
+      <div class="gallery-grid">
+        <div class="gallery-item">
+        <img src="images/images (2).jpg" alt="Tournament 1">
+       <p>LCAFE 2024 Summer Clash</p>
+    </div>
+
+      <img src="images/images (1).jpg" alt="Tournament Action" class="highlight-img">
+      <p>MTN Shift Gaming Experience Action Online Qualifiers!.</p>
+
+      <h3>Tournament Rules</h3>
+      <p>Stay tuned – we are uploading the official rules soon!</p>
+    </section>
+
+    <!-- MEMBERSHIP SECTION -->
+    <section id="membership">
+      <h2>Membership Sign Up</h2>
+      <form id="member-form" onsubmit="submitForm(event)">
+        <label for="name">Name</label>
+        <input type="text" id="member-name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="member-email" required>
+
+        <label for="school">School</label>
+        <input type="text" id="member-school" required>
+
+        <label for="gaming">Gaming Preferences</label>
+        <input type="text" id="member-gaming" required>
+
+        <button type="submit">Join Membership</button>
+      </form>
+
+      <h3>Membership Benefits</h3>
+      <ul>
+        <li>Free access to local tournaments</li>
+        <li>Exclusive Discord roles</li>
+        <li>Workshops and coaching</li>
+      </ul>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+  <h2>About Us</h2>
+  <p>
+    LCAFE Esports is a youth-focused initiative dedicated to unlocking gaming potential in township communities. 
+    Our mission is to create safe, inclusive, and exciting spaces where young people can engage in esports, 
+    discover new digital skills, and pursue opportunities in competitive gaming and web development.
+  </p>
+  <p>
+    We aim to introduce esports to primary and high schools, fostering talent from an early age. 
+    Through tournaments, workshops, and mentorship, we empower the next generation of players, creators, and tech innovators.
+  </p>
+</section>
+
+    <section id="team">
+      <h2>Our Team</h2>
+      <h3>Meet the Team</h3>
+      <div class="team-gallery">
+        <div class="team-member">
+          <img src="images/Likhaya Gashe.jpg" alt="Coach Khaya">
+          <p>Coach Khaya – League Coordinator</p>
+        </div>
+        <div class="team-member">
+          <img src="images/Avile Scott.jpg" alt=" Street Fighter Coach Avile">
+          <p>Veigh – Game Strategy Mentor</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form onsubmit="submitContact(event)">
+        <label for="contact-name">Name</label>
+        <input type="text" id="contact-name" required>
+
+        <label for="contact-email">Email</label>
+        <input type="email" id="contact-email" required>
+
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+      <hr style="margin: 2rem auto; width: 60%; border: 1px solid #444;">
+      <h3>Follow Us</h3>
+    </section>
+  </main>
+  <!-- BACKGROUND GAMING ANIMATION -->
+  <div class="background-animation">
+    <img src="images/bg-gamer.gif" alt="Background Gaming Animation,">
+  </div>
+  <footer>
+    <p>&copy; 2024 LCAFE Esports. All rights reserved.</p>
+  </footer>
+  <script src="server.js"></script>
+</body>
+</html>
