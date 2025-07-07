@@ -5,8 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>LCAFE Esports Tournament</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet" />
 </head>
 <body>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js"></script>
+    <script src="scripts/firebase.js"></script>
 
   <header>
     <img src="images/LCAFE ESPORTS NEW LOGO.png" alt="LCAFE Logo" class="site-logo">
@@ -22,23 +27,25 @@
     </nav>
   </header>
 
-   <!-- DONATION SECTION -->
-<section id="donate">
-  <h2>Support Esports Talent Community!</h2>
-  <p>Your donation helps fund community tournaments and workshops, 
-    With your support, we can reach more schools, bring more exciting tournaments in the future, 
-    and give even young talents a chance to shine. 🎮✨
-  </p>
-  <form id="donation-form" onsubmit="submitDonation(event)">
-    <label for="donation-amount">Donation Amount (Min R20):</label>
-    <input type="number" id="donation-amount" min="20" required>
-    <button type="submit">Donate</button>
-  </form>
-  <p id="donation-message"></p>
-</section>
+  <button class="rules-btn" onclick="toggleRules()">📜 View Rules</button>
 
+    <!-- Rules Modal -->
+    <div id="rulesModal" class="modal">
+      <div class="modal-content">
+        <span class="open" onclick="toggleRules()">&times;</span>
+        <h2>🎮 LCAFE Esports Rules</h2>
+        <ul class="rules-list">
+          <li><strong>Be on time:</strong> Players must arrive 15 mins early.</li>
+          <li><strong>No cheating or toxic behavior.</strong></li>
+          <li><strong>Respect staff, players, and equipment.</strong></li>
+          <li><strong>School teams require adult supervision.</strong></li>
+          <li><strong>Parental consent needed if under 18.</strong></li>
+          <li><strong>Play fair, be a good sport, and have fun!</strong></li>
+        </ul>
+      </div>
+    </div>
 
-  <main>
+    <main>
     <!-- HOME SECTION -->
     <section id="home">
       <h2>Welcome to Our Esports Community</h2>
@@ -49,42 +56,42 @@
     <!-- TOURNAMENT SECTION -->
     <section id="tournaments">
       <h2>Register for a Tournament</h2>
-
-      <form id="register-form" onsubmit="submitForm(event)">
-        <label for="name">Name</label>
-        <input type="text" id="name" required>
-
-        <label for="email">Email</label>
-        <input type="email" id="email" required>
-
-        <label for="school">Student/Guest/School</label>
-        <input type="text" id="school" required>
-
-        <label for="gaming">Gaming Preferences</label>
-        <input type="text" id="gaming" required>
-
-        <button type="submit">Join Now</button>
+      <form id="tournament-form" onsubmit="submitTournamentForm(event)">
+        <button type="submit">Registrations Open</button>
       </form>
 
       <h3>Upcoming Tournament</h3>
       <ul>
         <li>
-          Township Clash - 28 June 2025
-          <button type="button" onclick="openModal()">Register</button>
+          Scholar Championships Clash - 22 September 2025
+          <button type="button" onclick="openModal()">Join now!</button>
         </li>
       </ul>
 
       <h3>Past Tournaments</h3><section id="gallery">
       <div class="gallery-grid">
         <div class="gallery-item">
-        <img src="images/images (2).jpg" alt="Tournament 1">
-       <p>LCAFE 2024 Summer Clash</p>
+        <img src="images/Setup.jpg" alt="Tournament 1" class="highlight-img">
+       <p>LCAFE 2024 Summer Scholar Clash</p>
     </div>
 
       <img src="images/images (1).jpg" alt="Tournament Action" class="highlight-img">
-      <p>MTN Shift Gaming Experience Action Online Qualifiers!.</p>
-
+      <p>MTN Shift Gaming Experience 2024 Online Mall Qualifiers!.</p>
+    <br>
       <h3>Tournament Rules</h3>
+      <br>
+    <p><strong>Note:</strong> All players must be registered before participating.
+
+              Players must be present 15 minutes before their match time.
+
+              Respect referees, organizers, and fellow players at all times.
+
+              No swearing, bullying, or inappropriate behavior.
+
+              Players must use their real gamer tags or names.</p>
+      </div>
+      <br>
+
       <p>Stay tuned – we are uploading the official rules soon!</p>
     </section>
 
@@ -165,6 +172,21 @@
       <hr style="margin: 2rem auto; width: 60%; border: 1px solid #444;">
       <h3>Follow Us</h3>
     </section>
+
+     <!-- DONATION SECTION -->
+    <section id="donate">
+      <h2>Support Esports Talent Community!</h2>
+      <p>Your donation helps fund community tournaments and workshops, 
+        With your support, we can reach more schools, bring more exciting tournaments in the future, 
+        and give even young talents a chance to shine. 🎮✨
+      </p>
+      <form action="lcaferands@gmail.com" method="POST" enctype="text">
+      <input type="number" name="amount" placeholder="Amount in Zar (R50)" min="50" required />
+      <button type="submit">Donate Now</button>
+      </form>
+      <p id="donation-message"></p>
+    </section>
+
   </main>
   <!-- BACKGROUND GAMING ANIMATION -->
   <div class="background-animation">
@@ -173,6 +195,6 @@
   <footer>
     <p>&copy; 2024 LCAFE Esports. All rights reserved.</p>
   </footer>
-  <script src="server.js"></script>
+  <script/scripts/firebase.js></script>
 </body>
 </html>

@@ -14,8 +14,6 @@ body {
   color: #f3f4f8;
   line-height: 1.1;
   padding-bottom: 30px;
-  color: var(--text-light);
-  background-color: var(--bg-dark);
   color: inherit;
 }
 
@@ -31,11 +29,11 @@ body {
 }
 
 header {
-  background: linear-gradient(to right, #c3c1f5, #525074);
+  background: linear-gradient(to right, #160fe9, #525074);
   text-align: center;
   padding: 2rem 1rem;
   border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(143, 109, 109, 0.4);
+  box-shadow: 0 8px 20px rgba(238, 8, 8, 0.4);
   animation: flicker 2s infinite alternate;
 }
 
@@ -71,7 +69,7 @@ nav a {
 }
 
 nav a:hover {
-  background: rgba(243, 240, 240, 0.25);
+  background: rgba(199, 192, 192, 0.25);
   transform: translateY(-3px) scale(1.05);
 }
 
@@ -79,13 +77,13 @@ section {
   max-width: 999px;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(17, 17, 17, 0.1);
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
   text-align: center;
   transition: transform 0.4s ease;
-  color: #f3f4f8;
-  text-shadow: 0 0 5px #0c19d4, 0 0 10px #0f1110;
+  color: #cfd3f1;
+  text-shadow: 0 0 5px #0c19d4, 0 0 10px #0d0e0d;
 }
 
 section:hover {
@@ -310,4 +308,28 @@ footer {
   margin-top: 1rem;
   color: #a0ffac;
   font-weight: bold;
+}
+
+.rules-btn {
+  background: #007cf0;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.rules-btn:hover {
+  background: #00bcd4;
+  transform: scale(1.05);
+}
+
+.rules-list {
+  text-align: left;
+  line-height: 1.6;
+  padding-left: 1rem;
+  color: #f0f0f0;
 }
