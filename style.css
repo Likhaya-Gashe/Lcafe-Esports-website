@@ -15,6 +15,7 @@ body {
   line-height: 1.1;
   padding-bottom: 30px;
   color: inherit;
+  font-family: 'Poppins', sans-serif;
 }
 
 .site-logo {
@@ -311,17 +312,15 @@ footer {
 }
 
 .rules-btn {
+  display: inline-block;
   background: #007cf0;
   color: #fff;
   padding: 0.6rem 1.2rem;
-  border: none;
   border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  margin-top: 1rem;
+  text-decoration: none;
+  font-weight: bold;
   transition: background 0.3s, transform 0.3s;
 }
-
 .rules-btn:hover {
   background: #00bcd4;
   transform: scale(1.05);

@@ -5,14 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>LCAFE Esports Tournament</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet" />
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js"></script>
-    <script src="scripts/firebase.js"></script>
-
   <header>
     <img src="images/LCAFE ESPORTS NEW LOGO.png" alt="LCAFE Logo" class="site-logo">
     <h1>LCAFE ESPORTS</h1>
@@ -27,12 +24,12 @@
     </nav>
   </header>
 
-  <button class="rules-btn" onclick="toggleRules()">📜 View Rules</button>
+    <a href="rules.html" class="rules-btn">📜 View Rules</a>
 
     <!-- Rules Modal -->
     <div id="rulesModal" class="modal">
       <div class="modal-content">
-        <span class="open" onclick="toggleRules()">&times;</span>
+        <span class="closed" onclick="toggleRules()">&times;</span>
         <h2>🎮 LCAFE Esports Rules</h2>
         <ul class="rules-list">
           <li><strong>Be on time:</strong> Players must arrive 15 mins early.</li>
@@ -195,6 +192,6 @@
   <footer>
     <p>&copy; 2024 LCAFE Esports. All rights reserved.</p>
   </footer>
-  <script/scripts/firebase.js></script>
+  <script type="module" src="scripts/firebase.js"></script>
 </body>
 </html>
