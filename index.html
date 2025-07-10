@@ -56,15 +56,15 @@
       <form id="tournament-form" onsubmit="submitTournamentForm(event)">
         <button type="submit">Registrations Open</button>
       </form>
-
-      <h3>Upcoming Tournament</h3>
+      <br>
+      <h3>Next Tournament</h3>
       <ul>
         <li>
           Scholar Championships Clash - 22 September 2025
           <button type="button" onclick="openModal()">Join now!</button>
         </li>
       </ul>
-
+      <br>
       <h3>Past Tournaments</h3><section id="gallery">
       <div class="gallery-grid">
         <div class="gallery-item">
@@ -86,8 +86,8 @@
               No swearing, bullying, or inappropriate behavior.
 
               Players must use their real gamer tags or names.</p>
-      </div>
-      <br>
+    </div>
+    <br>
 
       <p>Stay tuned – we are uploading the official rules soon!</p>
     </section>
@@ -96,21 +96,21 @@
     <section id="membership">
       <h2>Membership Sign Up</h2>
       <form id="member-form" onsubmit="submitForm(event)">
-        <label for="name">Name</label>
-        <input type="text" id="member-name" required>
+      <label for="name">Name</label>
+      <input type="text" id="member-name" required>
 
-        <label for="email">Email</label>
-        <input type="email" id="member-email" required>
+      <label for="email">Email</label>
+      <input type="email" id="member-email" required>
 
-        <label for="school">School</label>
-        <input type="text" id="member-school" required>
+      <label for="school">School</label>
+      <input type="text" id="member-school" required>
 
-        <label for="gaming">Gaming Preferences</label>
-        <input type="text" id="member-gaming" required>
+      <label for="gaming">Gaming Preferences</label>
+      <input type="text" id="member-gaming" required>
 
-        <button type="submit">Join Membership</button>
+      <button type="submit">Join Membership</button>
       </form>
-
+      <br>
       <h3>Membership Benefits</h3>
       <ul>
         <li>Free access to local tournaments</li>
@@ -121,30 +121,43 @@
 
     <!-- ABOUT SECTION -->
     <section id="about">
-  <h2>About Us</h2>
-  <p>
-    LCAFE Esports is a youth-focused initiative dedicated to unlocking gaming potential in township communities. 
-    Our mission is to create safe, inclusive, and exciting spaces where young people can engage in esports, 
-    discover new digital skills, and pursue opportunities in competitive gaming and web development.
-  </p>
-  <p>
-    We aim to introduce esports to primary and high schools, fostering talent from an early age. 
-    Through tournaments, workshops, and mentorship, we empower the next generation of players, creators, and tech innovators.
-  </p>
-</section>
+      <h2>About Us</h2>
+      <p>
+      LCAFE Esports is a youth-focused initiative dedicated to unlocking gaming potential in township communities. 
+      Our mission is to create safe, inclusive, and exciting spaces where young people can engage in esports, 
+      discover new digital skills, and pursue opportunities in competitive gaming and web development.
+      </p>
+      <p>
+      We aim to introduce esports to primary and high schools, fostering talent from an early age. 
+      Through tournaments, workshops, and mentorship, we empower the next generation of players, creators, and tech innovators.
+     </p>
+    </section>
+
+    <section id="previous-tournaments">
+      <h2>🔥 Previous Tournaments</h2>
+      <div class="tournament-gallery">
+      <img src="images/Finals.jpg" alt="Tournament 1">
+      <img src="images/gallery-4.jpg" alt="Tournament 2">
+      <img src="images/gallery-3.jpg" alt="Tournament 3">
+      <img src="images/Gallery-6.jpg" alt="Tournament 4">
+      <img src="images/gallery-5.jpg" alt="Tournament 5">
+      <img src="images/gallery-2.jpg" alt="Tournament 6">
+    </div>
+    </section>
+
 
     <section id="team">
       <h2>Our Team</h2>
       <h3>Meet the Team</h3>
       <div class="team-gallery">
-        <div class="team-member">
-          <img src="images/Likhaya Gashe.jpg" alt="Coach Khaya">
-          <p>Coach Khaya – League Coordinator</p>
-        </div>
-        <div class="team-member">
-          <img src="images/Avile Scott.jpg" alt=" Street Fighter Coach Avile">
-          <p>Veigh – Game Strategy Mentor</p>
-        </div>
+      <div class="team-member">
+        <img src="images/Likhaya Gashe.jpg" alt="Coach Khaya">
+        <p>Coach Khaya – League Coordinator</p>
+      </div>
+      <div class="team-member">
+        <img src="images/Avile Scott.jpg" alt=" Street Fighter Coach Avile">
+        <p>Veigh – Game Strategy Mentor</p>
+      </div>
       </div>
     </section>
 
@@ -152,24 +165,24 @@
     <section id="contact">
       <h2>Contact Us</h2>
       <form onsubmit="submitContact(event)">
-        <label for="contact-name">Name</label>
-        <input type="text" id="contact-name" required>
+      <label for="contact-name">Name</label>
+      <input type="text" id="contact-name" required>
 
-        <label for="contact-email">Email</label>
-        <input type="email" id="contact-email" required>
+      <label for="contact-email">Email</label>
+      <input type="email" id="contact-email" required>
 
-        <label for="subject">Subject</label>
-        <input type="text" id="subject" required>
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" required>
 
-        <label for="message">Message</label>
-        <textarea id="message" required></textarea>
+      <label for="message">Message</label>
+      <textarea id="message" required></textarea>
 
-        <button type="submit">Send Message</button>
+      <button type="submit">Send Message</button>
       </form>
       <hr style="margin: 2rem auto; width: 60%; border: 1px solid #444;">
       <h3>Follow Us</h3>
+      <a href="https://maps.app.goo.gl/invBuUBdr1DM5GN28" target="_blank" class="google-link">View our Google Profile</a>
     </section>
-
      <!-- DONATION SECTION -->
     <section id="donate">
       <h2>Support Esports Talent Community!</h2>
@@ -183,14 +196,13 @@
       </form>
       <p id="donation-message"></p>
     </section>
-
   </main>
   <!-- BACKGROUND GAMING ANIMATION -->
   <div class="background-animation">
-    <img src="images/bg-gamer.gif" alt="Background Gaming Animation,">
+    <img src="images/bg-gamer.gif" alt="Background Gaming Animation, heght: 100%; width: 100%;">
   </div>
   <footer>
-    <p>&copy; 2024 LCAFE Esports. All rights reserved.</p>
+    <p>&copy; 2025 LCAFE Esports. All rights reserved.</p>
   </footer>
   <script type="module" src="scripts/firebase.js"></script>
 </body>
