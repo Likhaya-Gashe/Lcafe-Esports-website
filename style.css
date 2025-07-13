@@ -112,7 +112,6 @@ textarea {
   margin: 0 auto;              /* Centers element horizontally */
   display: block;              /* Needed for margin auto to work */
   background-color: #363636;
-  color: var(--text-light);    /* Ensures white text */
 }
 
 label {
