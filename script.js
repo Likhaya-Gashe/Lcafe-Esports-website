@@ -22,7 +22,7 @@ const db = getFirestore(app);
 // ========== HANDLE FORMS BELOW ==========
 
 // Tournament Registration
-document.getElementById('tournament-form')?.addEventListener('submit', async (e) => {
+document.getElementById('tournament-form').addEventListener('submit', async (e) => {
   e.preventDefault();
   try {
     await addDoc(collection(db, "tournament_registrations"), {
@@ -36,7 +36,7 @@ document.getElementById('tournament-form')?.addEventListener('submit', async (e)
 });
 
 // Membership Form
-document.getElementById('member-form')?.addEventListener('submit', async (e) => {
+document.getElementById('member-form').addEventListener('submit', async (e) => {
   e.preventDefault();
   const name = document.getElementById('member-name').value;
   const email = document.getElementById('member-email').value;
@@ -56,7 +56,7 @@ document.getElementById('member-form')?.addEventListener('submit', async (e) => 
 });
 
 // Contact Form
-document.querySelector('#contact form')?.addEventListener('submit', async (e) => {
+document.querySelector('contact-form').addEventListener('submit', async (e) => {
   e.preventDefault();
   const name = document.getElementById('contact-name').value;
   const email = document.getElementById('contact-email').value;
