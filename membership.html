@@ -5,14 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>LCAFE Esports Tournament</title>
   <link rel="stylesheet" href="style.css" />
- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <img src="images/LCAFE ESPORTS NEW LOGO.png" alt="LCAFE Logo" class="site-logo">
         <h1>LCAFE ESPORTS</h1>
-        <a href="index.html" class="membership.html-btn">⬅ Back to Home</a>
+        <a href="index.html" class="back-home-btn">← Go Back Home</a>
+
     </header>
+
     <!-- MEMBERSHIP SECTION -->
     <section id="membership">
       <h2>Membership Sign Up</h2>
@@ -22,15 +24,14 @@
 
       <label for="email">Email</label>
       <input type="email" id="member-email" required>
-
       <label for="school">School</label>
       <input type="text" id="member-school" required>
 
       <label for="gaming">Gaming Preferences</label>
       <input type="text" id="member-gaming" required>
-
       <button onsubmit="submit">Join Membership</button>
       </form>
+
       <br>
       <h3>Membership Benefits</h3>
       <ul>
@@ -39,7 +40,9 @@
         <li>Workshops and coaching</li>
       </ul>
     </section>
+
   </main>
+    <footer>
     <p>&copy; 2025 LCAFE Esports. All rights reserved.</p>
   </footer>
   <script type="module" src="scripts/firebase.js"></script>

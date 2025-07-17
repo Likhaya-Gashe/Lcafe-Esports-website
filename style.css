@@ -608,18 +608,30 @@ form select:focus {
   color: #fff;
 }
 
-.btn {
+.back-home-btn {
   display: inline-block;
-  padding: 12px 20px;
-  background: #4a68f0;
-  color: white;
+  margin: 40px auto;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: 600;
   text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: background 0.3s ease;
+  color: white;
+  background: #111;
+  border: 2px solid #00ffc8;
+  border-radius: 8px;
+  box-shadow: 0 0 12px #00ffc8;
+  transition: all 0.3s ease;
 }
 
-.btn:hover {
-  background: #019872;
+.back-home-btn:hover {
+  background: #00ffc8;
+  color: #000;
+  box-shadow: 0 0 20px #00ffc8, 0 0 30px #00ffc8;
+  transform: scale(1.05);
+}
+
+.back-home-wrapper {
+  text-align: center;
+  margin-top: 40px;
 }
 
