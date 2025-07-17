@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LCAFE Esports Tournament</title>
+  <link rel="stylesheet" href="style.css" />
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <img src="images/LCAFE ESPORTS NEW LOGO.png" alt="LCAFE Logo" class="site-logo">
+    <h1>Contact Page</h1>
+    <a href="index.html" class="Contact.html-btn">⬅ Back to Home</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="registration.html">Register</a></li>
+        <li><a href="membership.html">Membership</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </header>
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form onsubmit="submitMessage(event)">
+      <label for="contact-name">Name</label>
+      <input type="text" id="contact-name" required>
+
+      <label for="contact-email">Email</label>
+      <input type="email" id="contact-email" required>
+
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" required></textarea>
+
+      <button onsubmit="submit">Send Message</button>
+      </form>
+    </section>
+  <footer>
+    <p>&copy; 2025 LCAFE Esports. All rights reserved.</p>
+  </footer>
+  <script type="module" src="scripts/firebase.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
