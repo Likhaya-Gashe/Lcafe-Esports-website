@@ -23,6 +23,7 @@
   </header>
 
     <a href="rules.html" class="rules-btn">📜 View Rules</a>
+  
 
     <!-- Rules Modal -->
     <div id="rulesModal" class="modal">
@@ -52,7 +53,8 @@
     <section id="tournaments">
       <h2>Register for a Tournament</h2>
       <form id="tournament-form" onsubmit="submitTournamentForm(event)">
-        <button onsubmit="submit">Registration Form</button>
+        <button onclick="location.href='registrations.html'">Register Form</button>
+
       </form>
       <br>
       <h3>Next Tournament</h3>
@@ -165,7 +167,7 @@
     <!-- CONTACT SECTION -->
     <section id="contact">
       <h2>Contact Us</h2>
-      <form onsubmit="submitContact(event)">
+      <form onsubmit="submitMessage(event)">
       <label for="contact-name">Name</label>
       <input type="text" id="contact-name" required>
 

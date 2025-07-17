@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Registration for Tournament</h1>
+    <a href="index.html" class="btn">← Back to Home</a>
+  </header>
+
+  <main class="form-container">
+    <form id="tournament-form">
+      <h2>Player Registration Form</h2>
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="game">Game Title</label>
+      <input type="text" id="game" name="game" required>
+
+      <label for="platform">Gaming Platform</label>
+      <select id="platform" name="platform" required>
+        <strong><option value="">Select Platform</option></strong>
+        <option value="PC">PC</option>
+        <option value="PlayStation">PlayStation</option>
+        <option value="Xbox">Xbox</option>
+      </select>
+
+      <button type="submit" class="btn">Submit Registration</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 LCAFE Esports. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
