@@ -1,0 +1,28 @@
+[debug] [2025-07-18T17:29:25.609Z] ----------------------------------------------------------------------
+[debug] [2025-07-18T17:29:25.619Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Inspiron 15\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js use --add
+[debug] [2025-07-18T17:29:25.620Z] CLI Version:   14.9.0
+[debug] [2025-07-18T17:29:25.621Z] Platform:      win32
+[debug] [2025-07-18T17:29:25.622Z] Node Version:  v22.17.0
+[debug] [2025-07-18T17:29:25.624Z] Time:          Fri Jul 18 2025 19:29:25 GMT+0200 (South Africa Standard Time)
+[debug] [2025-07-18T17:29:25.625Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-07-18T17:29:26.341Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-07-18T17:29:26.343Z] > authorizing via signed-in user (lcaferands@gmail.com)
+[debug] [2025-07-18T17:29:26.347Z] Checked if tokens are valid: true, expires at: 1752861142789
+[debug] [2025-07-18T17:29:26.348Z] Checked if tokens are valid: true, expires at: 1752861142789
+[debug] [2025-07-18T17:29:26.351Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2025-07-18T17:29:27.375Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2025-07-18T17:29:27.376Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[debug] [2025-07-18T17:29:27.803Z] ValidationError: [select prompt] No selectable choices. All choices are disabled.
+    at C:\Users\Inspiron 15\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\@inquirer\select\dist\commonjs\index.js:60:19
+    at C:\Users\Inspiron 15\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\@inquirer\core\dist\commonjs\lib\use-memo.js:11:27
+    at withPointer (C:\Users\Inspiron 15\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\@inquirer\core\dist\commonjs\lib\hook-engine.js:79:25)
+    at useMemo (C:\Users\Inspiron 15\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\@inquirer\core\dist\commonjs\lib\use-memo.js:6:45)
+    at C:\Users\Inspiron 15\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\@inquirer\select\dist\commonjs\index.js:56:39
+    at C:\Users\Inspiron 15\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\@inquirer\core\dist\commonjs\lib\create-prompt.js:120:38
+    at store.handleChange (C:\Users\Inspiron 15\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\@inquirer\core\dist\commonjs\lib\hook-engine.js:31:17)
+    at cycle (C:\Users\Inspiron 15\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\@inquirer\core\dist\commonjs\lib\hook-engine.js:33:19)
+    at C:\Users\Inspiron 15\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\@inquirer\core\dist\commonjs\lib\create-prompt.js:118:13
+    at C:\Users\Inspiron 15\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\@inquirer\core\dist\commonjs\lib\hook-engine.js:35:16
+[error] 
+[error] Error: An unexpected error has occurred.

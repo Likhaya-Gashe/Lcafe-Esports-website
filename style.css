@@ -635,4 +635,12 @@ form select:focus {
   margin-top: 40px;
 }
 
-
+.gallery{
+  max-width: 600px;
+  margin: 50px auto;
+  background: #1e1e1e;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 255, 135, 0.4);
+  color: #fff;
+}

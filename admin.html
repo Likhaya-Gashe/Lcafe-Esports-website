@@ -59,39 +59,55 @@
 
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-    import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+  import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+  import { getAuth, onAuthStateChanged, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
-    const firebaseConfig = {
-      apiKey: "AIzaSyDvLACQSfkE1oiFZaFvt9qthQWWoy7gLRg",
-      authDomain: "lcafe-esports.firebaseapp.com",
-      projectId: "lcafe-esports",
-      storageBucket: "lcafe-esports.appspot.com",
-      messagingSenderId: "228775173156",
-      appId: "1:228775173156:web:550714489b0448c4a1ccb1",
-      measurementId: "G-GYYWNBCNRS"
-    };
+  const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_PROJECT_ID.appspot.com",
+  messagingSenderId: "YOUR_SENDER_ID",
+  appId: "YOUR_APP_ID"
+  };
 
-    const app = initializeApp(firebaseConfig);
-    const db = getFirestore(app);
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+  const auth = getAuth(app);
 
-    async function loadMessages() {
-      const tableBody = document.querySelector("#messagesTable tbody");
-      const querySnapshot = await getDocs(collection(db, "contactMessages"));
+  const tableBody = document.querySelector("#registrationTable tbody");
 
-      querySnapshot.forEach((doc) => {
-        const data = doc.data();
-        const row = document.createElement("tr");
-        row.innerHTML = `
-          <td>${data.name}</td>
-          <td>${data.email}</td>
-          <td>${data.message}</td>
-          <td>${data.timestamp ? new Date(data.timestamp.seconds * 1000).toLocaleString() : ""}</td>
-        `;
-        tableBody.appendChild(row);
-      });
-    }
+  function loadRegistrations() {
+  getDocs(collection(db, "tournamentRegistrations")).then(querySnapshot => {
+    querySnapshot.forEach(doc => {
+      const data = doc.data();
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${data.fullName}</td>
+        <td>${data.email}</td>
+        <td>${data.phoneNumber}</td>
+        <td>${data.gameTitle}</td>
+        <td>${data.platform}</td>
+        <td>${new Date(data.registrationDate?.seconds * 1000).toLocaleString()}</td>
+      `;
+      tableBody.appendChild(row);
+    });
+  });
+  }
 
-    loadMessages();
+// Wait for login
+  onAuthStateChanged(auth, user => {
+  if (user) {
+    loadRegistrations();
+  } else {
+    const email = prompt("Enter admin email:");
+    const password = prompt("Enter password:");
+    signInWithEmailAndPassword(auth, email, password)
+      .then(() => loadRegistrations())
+      .catch(() => alert("Access denied."));
+  }
+  });
+
   </script>
 </body>
 </html>

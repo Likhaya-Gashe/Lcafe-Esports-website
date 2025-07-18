@@ -1,0 +1,1 @@
+// JS to handle contact form submission to Firestore
