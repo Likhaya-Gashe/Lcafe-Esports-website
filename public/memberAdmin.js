@@ -1,1 +1,0 @@
-// JS to fetch and display members collection

@@ -1,1 +1,0 @@
-// JS to handle membership form submission to Firestore
