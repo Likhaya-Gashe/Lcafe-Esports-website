@@ -644,3 +644,19 @@ form select:focus {
   box-shadow: 0 0 20px rgba(0, 255, 135, 0.4);
   color: #fff;
 }
+
+#gallery ul {
+  list-style-type: disc;
+  padding-left: 80px;
+  padding-right: 80px;
+  text-align: center;
+  box-shadow: 0 0 20px #00ffc8, 0 0 30px #00ffc8;
+  border-radius: 16px;
+  margin-top: 20px;
+  padding: 16px 30px;
+  max-width: 999px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: #b6b4b4;
+}
