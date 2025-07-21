@@ -57,17 +57,19 @@ nav ul {
 }
 
 nav a {
-  color: #ffff;
+  color: #f5f5f8;
   padding: 8px 10px;
   text-decoration: none;
   font-weight: bold;
-  text-shadow: 0 0 5px #c2c3da, 0 0 10px #0d0e0d;
+  text-shadow: 0 0 5px #c2c3da, 0 0 10px #eff3ef;
   transition: background 0.4s ease, transform 0.3s ease;
 }
 
 nav a:hover {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(11, 248, 110, 0.25);
   transform: translateY(-3px) scale(1.05);
+  border-radius: 4px;
+  text-shadow: 0 0 5px #c2c3da, 0 0 10px #eff3ef;
 }
 
 section {
@@ -81,6 +83,12 @@ section {
   transition: transform 0.4s ease;
   color: #f0f1f5;
   text-shadow: 0 0 5px #c2c3da, 0 0 10px #0d0e0d;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.6);
+  border-top: 2px solid #00ffc3;
+  border-radius: 12px;
+  margin-top: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 255, 195, 0.2);
 }
 
 section:hover {
@@ -314,6 +322,12 @@ footer {
   text-decoration: none;
   font-weight: bold;
   transition: background 0.3s, transform 0.3s;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.6);
+  border-top: 2px solid #00ffc3;
+  border-radius: 12px;
+  margin-top: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 255, 195, 0.2);
 }
 .rules-btn:hover {
   background: #cce7eb;
@@ -335,6 +349,12 @@ footer {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
   text-align: center;
   border: 1px solid #292929;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.6);
+  border-top: 2px solid #00ffc3;
+  border-radius: 12px;
+  margin-top: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 255, 195, 0.2);
 }
 
 #previous-tournaments h2 {
