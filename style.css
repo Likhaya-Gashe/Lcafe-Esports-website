@@ -33,7 +33,7 @@ header {
   text-align: center;
   padding: 2rem 1rem;
   border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(238, 8, 8, 0.4);
+  box-shadow: 0 8px 20px rgba(6, 204, 39, 0.4);
   animation: flicker 2s infinite alternate;
 }
 
@@ -59,12 +59,11 @@ nav ul {
 nav a {
   color: #080808;
   color: var(--text-light);
-  background-color: rgba(0, 0, 0, 0.15);
   padding: 10px 20px;
   border-radius: 10px;
   text-decoration: none;
   font-weight: bold;
-  text-shadow: 0 0 5px #c2c3da, 0 0 10px #eff3ef;
+  text-shadow: 0 0 5px #12e76b, 0 0 10px #fdfffd;
   transition: background 0.4s ease, transform 0.3s ease;
 }
 
@@ -77,13 +76,17 @@ section {
   max-width: 999px;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: rgba(17, 17, 17, 0.1);
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
   text-align: center;
   transition: transform 0.4s ease;
   color: #cfd3f1;
   text-shadow: 0 0 5px #0c19d4, 0 0 10px #0d0e0d;
+  background: rgba(0, 0, 0, 0.6);
+  border-top: 2px solid #00ffc3;
+  border-radius: 12px;
+  margin-top: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 255, 195, 0.2);
 }
 
 section:hover {
