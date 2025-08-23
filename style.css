@@ -24,6 +24,7 @@ body {
   border-radius: 8px;
   margin-bottom: 1rem;
   transition: transform 0.2s ease-in-out;
+  animation: flicker 2s infinite alternate;
 }
 .site-logo:hover {
   transform: scale(1.1) rotate(1deg);
