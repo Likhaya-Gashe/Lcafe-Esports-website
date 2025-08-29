@@ -181,7 +181,8 @@ return false;
 return true;
  }
 </script>
-<form onsubmit="return actionPayFastJavascript( this );" name="PayFastPayNowForm" action="https://payment.payfast.io/eng/process" method="post">
+<form onsubmit="return actionPayFastJavascript( this );" name="PayFastPayNowForm"
+      action="https://payment.payfast.io/eng/process" method="post">
 <input required type="hidden" name="cmd" value="_paynow">
 <input required type="hidden" name="receiver" pattern="[0-9]" value="31317909">
 <input type="hidden" name="return_url" value="https://www.lcafe-esports.co.za">
@@ -190,7 +191,8 @@ return true;
 <table>
 <tr>
 <td><label id="PayFastAmountLabel" for="PayFastAmount">Amount: </label></td>
-<td><input required id="PayFastAmount" type="number" step=".01" name="amount" min="5.00" placeholder="5.00" value="100"></td>
+<td><input required id="PayFastAmount" type="number" step=".01" name="amount" min="5.00"
+    placeholder="5.00" value="100"></td>
 </tr>
 </table>
 
@@ -206,7 +208,8 @@ return true;
 <table>
 <tr>
 <td colspan=2 align=center>
-<input type="image" src="https://my.payfast.io/images/buttons/PayNow/Primary-Small-PayNow.png" alt="Pay Now" title="Pay Now with Payfast">
+<input type="image" src="https://my.payfast.io/images/buttons/PayNow/Primary-Small-PayNow.png" 
+    alt="Pay Now" title="Pay Now with Payfast">
 </td>
 </tr>
 </table>

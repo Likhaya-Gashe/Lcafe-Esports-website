@@ -333,6 +333,7 @@ footer {
   border-radius: 12px;
   margin-top: 2rem;
   box-shadow: 0 4px 12px rgba(0, 255, 195, 0.2);
+  font-size: larger;
 }
 .rules-btn:hover {
   background: #cce7eb;
@@ -702,9 +703,53 @@ form select:focus {
   transform: scale(1.1);
   opacity: 0.8;
 }
-.payfast-btn {
-  width: 150px;
+
+/* Inputs (Amount + Quantity) */
+#PayFastAmount, 
+#custom_quantity {
+  width: 120px;
+  max-width: 45%;
+  padding: 6px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Add subtle focus effect */
+#PayFastAmount:focus, 
+#custom_quantity:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+  outline: none;
+}
+
+/* Labels */
+#PayFastAmountLabel,
+label[for="custom_quantity"] {
+  font-size: 14px;
+  margin-right: 8px;
+  display: inline-block;
+  min-width: 70px;
+  text-align: right;
+}
+
+/* PayFast button */
+input[type="image"] {
+  max-width: 150px;
   height: auto;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  margin-top: 12px;
+  border-radius: 80px;
+  box-shadow: 0 0 2px #00ffc8, 0 0 30px #00ffc8;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* Hover effect for button */
+input[type="image"]:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 14px rgba(37, 230, 11, 0.3);
+  filter: brightness(1.5);
 }
