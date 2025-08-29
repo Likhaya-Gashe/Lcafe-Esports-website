@@ -704,22 +704,8 @@ form select:focus {
 }
 
 .payfast-btn {
-  background-color: #06db78;   /* PayFast orange */
-  color: #fff;
-  font-size: 14px;
-  font-weight: bold;
-  padding: 10px 18px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  width: 180px;
-  box-shadow: 0 0 2px #00ffc8, 0 0 30px #00ffc8;
+  width: 150px;
+  height: auto;
+  box-shadow: 0 0 1px #00ffc8, 0 0 30px #00ffc8;
 }
-
-.payfast-custom-btn:hover {
-  background-color: #e55a00;   /* darker orange on hover */
-  transform: scale(1.05);
-}
-
 
