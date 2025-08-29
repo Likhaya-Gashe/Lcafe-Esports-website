@@ -168,19 +168,26 @@ formReference['amount'].value = formReference['amount'].value * formReference['c
 return true;
 }
 </script>
- <script type="text/javascript">
-function actionPayFastJavascript ( formReference ) {
-let shippingValidOrOff = typeof shippingValid !== 'undefined' ? shippingValid : true; 
-let customValid = shippingValidOrOff ? customQuantitiesPayFast( formReference ) : false;
- if (typeof shippingValid !== 'undefined' && !shippingValid) {
-return false;
-}
-if (typeof customValid !== 'undefined' && !customValid) {
-return false;
-}
-return true;
- }
-</script>
+
+  <script type="text/javascript">
+    function customQuantitiesPayFast (formReference) {
+    formReference['amount'].value = formReference['amount'].value * formReference['custom_quantity'].value;
+    return true;
+    }
+    </script>
+    <script type="text/javascript">
+    function actionPayFastJavascript ( formReference ) {
+    let shippingValidOrOff = typeof shippingValid !== 'undefined' ? shippingValid : true; 
+    let customValid = shippingValidOrOff ? customQuantitiesPayFast( formReference ) : false;
+    if (typeof shippingValid !== 'undefined' && !shippingValid) {
+    return false;
+    }
+    if (typeof customValid !== 'undefined' && !customValid) {
+    return false;
+    }
+    return true;
+    }
+    </script>
     <form onsubmit="return actionPayFastJavascript( this );" name="PayFastPayNowForm" action="https://payment.payfast.io/eng/process" method="post">
     <input required type="hidden" name="cmd" value="_paynow">
     <input required type="hidden" name="receiver" pattern="[0-9]" value="31317909">
@@ -206,11 +213,11 @@ return true;
     <table>
     <tr>
     <td colspan=2 align=center>
-    <input type="image" src="https://my.payfast.io/images/buttons/BuyNow/Primary-Large-BuyNow.png" alt="Buy Now" title="Buy Now with Payfast">
+    <input type="image" src="https://my.payfast.io/images/buttons/PayNow/Primary-Small-PayNow.png" alt="Pay Now" title="Pay Now with Payfast">
     </td>
     </tr>
     </table>
-</form>
+  </form>>
 
     </section>
   </main>
