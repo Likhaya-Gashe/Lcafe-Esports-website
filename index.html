@@ -43,36 +43,69 @@
       </div>
     </div>
     <main>
-    <div class="countdown-box">
-    <h2>Next Event Starts In</h2>
-    <div id="countdown"></div>
-    </div>  
+  <section class="hero-section">
 
-    <div id="countdown"></div>
+<video autoplay muted loop playsinline class="hero-video">
+<source src="images/Mfuleni High Clip.mp4" type="video/mp4">
+</video>
 
+<div class="hero-overlay"></div>
+
+<div class="hero-content">
+
+<h1>LEVEL UP THE FUTURE</h1>
+
+<p>
+Empowering township youth through structured esports scene, fostering talent, teamwork, and a passion for
+technology, digital skills, and gaming culture.
+</p>
+
+<div class="hero-buttons">
+
+<a href="register.html" class="hero-btn primary-btn">
+REGISTER NOW
+</a>
+
+<a href="league.html" class="hero-btn secondary-btn">
+JOIN THE LEAGUE
+</a>
+
+</div>
+
+<div class="countdown-box">
+<h2>Next Tournament Starts In</h2>
+<div id="countdown"></div>
+</div>
 <script>
-    const eventDate = new Date("June 30, 2026 10:00:00").getTime();
 
-    const timer = setInterval(function() {
+const eventDate = new Date("Jun 16, 2026 10:00:00").getTime();
 
-    const now = new Date().getTime();
-    const distance = eventDate - now;
+const timer = setInterval(function(){
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+const now = new Date().getTime();
 
-    document.getElementById("countdown").innerHTML =
-    days + " Days " + hours + " Hours "
-    + minutes + " Minutes ";
+const distance = eventDate - now;
 
-    if (distance < 0) {
-    clearInterval(timer);
-    document.getElementById("countdown").innerHTML = "TOURNAMENT STARTED";
-    }
+const days = Math.floor(distance / (1000 * 60 * 60 * 24));
 
-    }, 1000);
-</script>  
+const hours = Math.floor((distance % (1000 * 60 * 60 * 24))
+/ (1000 * 60 * 60));
+
+const minutes = Math.floor((distance % (1000 * 60 * 60))
+/ (1000 * 60));
+
+document.getElementById("countdown").innerHTML =
+days + " Days " +
+hours + " Hours " +
+minutes + " Minutes ";
+
+},1000);
+
+</script>
+</div>
+
+</section>
+      
     <!-- HOME SECTION -->
     <section id="home">
       <h2>Welcome to Our Esports Community</h2>
@@ -86,7 +119,7 @@
     <section id="tournaments">
       </form>
       <br>
-      <h2>Up-coming Tournament:</h2>
+      <h2>Previous Tournaments:</h2>
       <ul>
         <li>
         <p> EA FC25 Tournament PS5 Clash</p>
@@ -95,16 +128,16 @@
         <p><strong>Admin Fee:</strong> R130 per player</p>           
       </ul>     
       <br>
-      <h1>Previous Tournaments</h1><section id="gallery">
+      <h1> Up-coming Tournament</h1><section id="gallery">
       <div class="gallery-grid">
         <div class="gallery-item">
-        <img src="images/Poster.jpg" alt="Tournament 1" class="highlight-img">
-       <p>PS5 Summer Clash</p>
+        <img src="images/EA FC26.png" alt="Tournament 1" class="highlight-img">
+       <p>#16 June 2026 Tournament l 32 Players. 1 Champion. Cash Prizes!</p>
     </div>
 
-      <img src="images/images (1).jpg" alt="Tournament Action" class="highlight-img">
-      <img src="images/School.jpg" alt="Tournament Action" class="highlight-img">
-      <p>MTN Shift Gaming Experience 2024 Online Mall Qualifiers!.</p>
+      <img src="images/Champions league.png" alt="Tournament Action" class="highlight-img">
+      <p> We proudly present: LCL 32 Players. 1 Champion. Cash Prizes R4,000 up for grabs!, Join us for an epic showdown in the LCAFE Champions League 26, where 32 players will battle it out for the ultimate title and cash prizes. Don't miss the action from June 21-30, 2026!</p>
+      </p>
 
     </section>
 
