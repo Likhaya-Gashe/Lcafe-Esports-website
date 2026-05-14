@@ -10,14 +10,14 @@
 <body>
   <header>
     <img src="images/Logo.png" alt="LCAFE Logo" class="site-logo">
-    <h2>"Empowering youth through esports and technology!"</h2>
+    <h2>"Play, Compete & win!"</h2>
     <nav>
    <header>
   <nav>
     <ul>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="membership.html">Membership</a></li>
-      <li><a href="tournments.html">Tournments</a></li>
+      <li><a href="tournments.html">Tournaments</a></li>
       <li><a href="gallery.html">Games Catalogue</a></li>
       <li><a href="about.html">About Us</a></li>
     </ul>
@@ -43,11 +43,43 @@
       </div>
     </div>
     <main>
+    <div class="countdown-box">
+    <h2>Next Event Starts In</h2>
+    <div id="countdown"></div>
+    </div>  
+
+    <div id="countdown"></div>
+
+<script>
+    const eventDate = new Date("June 30, 2026 10:00:00").getTime();
+
+    const timer = setInterval(function() {
+
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+    document.getElementById("countdown").innerHTML =
+    days + " Days " + hours + " Hours "
+    + minutes + " Minutes ";
+
+    if (distance < 0) {
+    clearInterval(timer);
+    document.getElementById("countdown").innerHTML = "TOURNAMENT STARTED";
+    }
+
+    }, 1000);
+</script>  
     <!-- HOME SECTION -->
     <section id="home">
       <h2>Welcome to Our Esports Community</h2>
       <p>Join us for exciting tournaments and connect with fellow gamers.</p>
-      <p>We are a pop-up-driven esports initiative focused on empowering youth in township communities through gaming.</p>
+      <p>We are a pop-up-driven esports initiative focused on empowering youth in township communities through gaming.
+        Youth. Passion. Competition. Culture. Join us at LCAFE Esports!</p> 
+      </p>
     </section>
 
     <!-- TOURNAMENT SECTION -->
@@ -57,7 +89,7 @@
       <h2>Up-coming Tournament:</h2>
       <ul>
         <li>
-        <p> EA FC25 Tournment PS5 Clash</p>
+        <p> EA FC25 Tournament PS5 Clash</p>
         <p><strong>Date:</strong> 20th Dec 2025</p>
         <p><strong>Location:</strong> Car Wash Mfuleni</p>
         <p><strong>Admin Fee:</strong> R130 per player</p>           
@@ -94,13 +126,13 @@
       <div class="team-gallery">
       <div class="team-member">
         <img src="images/Likhaya Gashe.jpg" alt="Ea Fc 25 Coach Khaya">
-        <p>Coach Khaya – Founder & Tournments Coordinator.</p>
+        <p>Coach Khaya – Founder & Tournaments Coordinator.</p>
         <p>Pro Elite – EA FC 25 Tutor.</p>
       </div>
       <div class="team-member">
         <img src="images/Avile Scott.jpg" alt=" Street Fighter Coach Avile">
-        <p>Coach Veigh – Game Strategy Mentor - Minecratf Specialist.</p>
-        <p>Receiptionist & Street Fighter 6 Tutor.</p>
+        <p>Coach Veigh – Game Strategy Mentor - Minecraft Specialist.</p>
+        <p>Receptionist & Street Fighter 6 Tutor.</p>
       </div>
       </div>
     </section>
@@ -236,7 +268,7 @@ return true;
   </div>
 
   <footer>
-    <p>&copy; 2025 LCAFE Esports. All rights reserved.</p>
+    <p>&copy; 2026 LCAFE Esports. All rights reserved.</p>
   </footer>
   
   <script type="module" src="scripts/firebase.js"></script>
