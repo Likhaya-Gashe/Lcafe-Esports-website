@@ -77,7 +77,7 @@ nav a:hover {
 }
 
 section {
-  max-width: 999px;
+  max-width: 666px;
   margin: 2rem auto;
   padding: 2rem;
   border-radius: 12px;
@@ -176,7 +176,7 @@ ul li {
   display: none;
   position: fixed;
   z-index: 20;
-  padding-top: 100px;
+  padding-top: 80px;
   left: 0;
   top: 0;
   width: 100%;
@@ -195,16 +195,6 @@ ul li {
   color: #fff;
   border-radius: 12px;
   animation: slideDown 0.5s;
-}
-
-@keyframes slideDown {
-  from { transform: translateY(-50px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
 }
 
 .close {
@@ -252,7 +242,7 @@ ul li {
 
 /* Background Gaming Animation */
 .background-animation {
-  position: -ms-page;
+  position: absolute;
   bottom: 0;
   right: 0;
   opacity: 0.08;
@@ -270,16 +260,6 @@ footer {
   color: #ccc;
   background-color: #111;
   z-index: 1;
-}
-
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 1.8rem;
-  }
-  nav ul {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
 }
 
 #registrationModal {
@@ -755,7 +735,7 @@ input[type="image"] {
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:20px;
-  max-width:900px;
+  max-width:600px;
   margin:auto;
 }
 
