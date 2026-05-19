@@ -551,15 +551,6 @@ footer {
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
 }
 
-/* === Donation Message Glow === */
-#donation-message {
-  text-align: center;
-  margin-top: 1rem;
-  color: #00ff8c;
-  font-weight: bold;
-  text-shadow: 0 0 8px #00ff8c;
-}
-
 form {
   max-width: 400px;
   margin: 20px auto;
@@ -599,7 +590,6 @@ button:hover {
 .form-container {
   max-width: 600px;
   margin: 50px auto;
-  background: #1e1e1e;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 255, 135, 0.4);
@@ -659,36 +649,6 @@ form select:focus {
 .back-home-wrapper {
   text-align: center;
   margin-top: 40px;
-}
-
-.gallery{
-  max-width: 600px;
-  margin: 50px auto;
-  background: #1e1e1e;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 255, 135, 0.4);
-  color: #fff;
-}
-.gallery :hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #00ffc8, 0 0 30px #00ffc8;
-}
-.gallery ul {
-  list-style-type: disc;
-  padding-left: 80px;
-  padding-right: 80px;
-  text-align: center;
-  box-shadow: 0 0 20px #00ffc8, 0 0 30px #00ffc8;
-  border-radius: 16px;
-  margin-top: 20px;
-  padding: 16px 30px;
-  max-width: 999px;
-  font-weight: 600;
-  font-size: 1.2rem;
-  background: rgba(255, 255, 255, 0.05);
-  color: #b6b4b4;
-  font-size: 18px;
 }
 
 /* Social Media Links Styling */
@@ -779,109 +739,36 @@ input[type="image"] {
   box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
 
-.game-card {
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  padding: 15px;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.game-card img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-.game-card p {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 0;
-}
-.game-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-  background: #080808ff;
-}
-.hero-section{
-  position:relative;
-  height:80vh;
-  overflow:hidden;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+/* COUNTDOWN */
+.countdown-section{
   text-align:center;
-  background:black;
-  color:white;
-}
-.hero-video{
-  position:absolute;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  z-index:1;
-}
-.hero-overlay{
-  position:absolute;
-  width:80%;
-  height:80%;
-  background:rgba(0,0,0,0.65);
-  z-index:2;
-}
-.hero-content{
-  position:relative;
-  z-index:3;
-  max-width:900px;
-  padding:20px;
-}
-.hero-content h1{
-  font-size:5rem;
-  color:#39ff14;
-  font-weight:900;
-  text-shadow:0 0 20px #39ff14;
-}
-.hero-content p{
-  font-size:1.2rem;
-  margin-top:20px;
-  line-height:1.6;
+  padding:60px 20px;
 }
 
-.hero-buttons{
-  margin-top:30px;
-  display:flex;
-  justify-content:center;
+.countdown-section h3{
+  font-size:1.6rem;
+  margin-bottom:35px;
+  color:#39ff14;
+}
+
+.countdown-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
   gap:20px;
-  flex-wrap:wrap;
+  max-width:900px;
+  margin:auto;
 }
 
-.hero-btn{
-  padding:15px 30px;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:bold;
-  transition:0.3s;
+.time-box{
+  padding:30px 20px;
+  border:1px solid rgba(57,255,20,0.35);
+  background:rgba(0,0,0,0.65);
+  border-radius:18px;
+  box-shadow:0 0 20px rgba(57,255,20,0.12);
 }
 
-.primary-btn{
-  background:#39ff14;
-  color:black;
-}
-
-.secondary-btn{
-  border:2px solid #39ff14;
+.time-box span{
+  font-size:3rem;
+  font-weight:800;
   color:#39ff14;
-}
-
-.countdown-box{
-  margin-top:40px;
-  padding:20px;
-  border:2px solid #4bff14;
-  border-radius:15px;
-  background:rgba(0,0,0,0.7);
-  box-shadow:0 0 20px #39ff14;
-}
-
-.countdown{
-  font-size:2rem;
-  margin-top:10px;
-  font-weight:bold;
-
 }

@@ -52,60 +52,7 @@ menu.style.right = "0px";
   </div>
   </div>
   <main>
-
-<section class="hero-section">
-<video autoplay muted loop playsinline class="hero-video"><source src="images/Mfuleni High Clip.mp4" type="video/mp4"></video>
-
-<div class="hero-overlay"></div>
-
-<div class="hero-content">
-
-<h1>LEVEL UP THE FUTURE</h1>
-
-<p>
-Empowering township youth through structured esports scene, fostering talent, teamwork, and a passion for
-technology, digital skills, and gaming culture.
-</p>
-
-<div class="hero-buttons">
-
-<a href="register.html" class="hero-btn primary-btn">
-REGISTER NOW
-</a>
-
-<a href="league.html" class="hero-btn secondary-btn">
-JOIN THE LEAGUE
-</a>
-</div><div class="countdown-box">
-  <h2>Next Tournament Starts In</h2><div id="countdown"></div>
-</div>
-<script>
-
-const eventDate = new Date("Jun 16, 2026 10:00:00").getTime();
-
-const timer = setInterval(function(){
-
-const now = new Date().getTime();
-
-const distance = eventDate - now;
-
-const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-
-const hours = Math.floor((distance % (1000 * 60 * 60 * 24))
-/ (1000 * 60 * 60));
-
-const minutes = Math.floor((distance % (1000 * 60 * 60))
-/ (1000 * 60));
-
-document.getElementById("countdown").innerHTML =
-days + " Days " +
-hours + " Hours " +
-minutes + " Minutes ";
-
-},1000);
-  </script>
-    </div></section>
-    
+ 
   <!-- HOME SECTION -->
   <section id="home">
     <h2>Welcome to Our Esports Community</h2>
@@ -113,6 +60,36 @@ minutes + " Minutes ";
     <p>We are a pop-up-driven esports initiative focused on empowering youth in township communities through gaming.
       Youth. Passion. Competition. Culture. Join us at LCAFE Esports!</p> 
     </p>
+  </section>
+  <!-- COUNTDOWN -->
+  <section class="countdown-section">
+
+    <h3>NEXT TOURNAMENT STARTS IN</h3>
+
+    <div class="countdown-grid">
+
+      <div class="time-box">
+        <span id="days">28</span>
+        <p>DAYS</p>
+      </div>
+
+      <div class="time-box">
+        <span id="hours">14</span>
+        <p>HOURS</p>
+      </div>
+
+      <div class="time-box">
+        <span id="minutes">34</span>
+        <p>MINUTES</p>
+      </div>
+
+      <div class="time-box">
+        <span id="seconds">56</span>
+        <p>SECONDS</p>
+      </div>
+
+    </div>
+
   </section>
   <!-- TOURNAMENT SECTION -->
   <section id="tournaments">
@@ -136,39 +113,11 @@ minutes + " Minutes ";
     <p> We proudly present: LCL 32 Players. 1 Champion. Cash Prizes R4,000 up for grabs!, Join us for an epic showdown in the LCAFE Champions League 26, where 32 players will battle it out for the ultimate title and cash prizes. Don't miss the action from June 21-30, 2026!</p>
     </p>
     </section>
-
-    <section id="previous-tournaments">
-  <h2>Gallery</h2>
-    <div class="tournament-gallery">
-    <img src="images/fall-high-school-esports-series-presents-gaming-careers-to-teens-share.jpg" alt="Tournament 1">
-    <img src="images/gallery-4.jpg" alt="Tournament 2">
-    <img src="images/Centennial-Schhols.jpg" alt="Tournament 3">
-    <img src="images/School.jpg" alt="Tournament 4">
-    <img src="images/gallery-5.jpg" alt="Tournament 5">
-    <img src="images/190318203512-high-school-esports.jpg" alt="Tournament 6">
-    </div>
-  </section>
-  <section id="team">
-  <h2>Our Team</h2>
-  <h3>Meet the Team</h3>
-    <div class="team-gallery">
-    <div class="team-member">
-    <img src="images/Likhaya Gashe.jpg" alt="Ea Fc 25 Coach Khaya">
-    <p>Coach Khaya – Founder & Tournaments Coordinator.</p>
-    <p>Pro Elite – EA FC 25 Tutor.</p>
-  </div>
-
-  <div class="team-member">
-  <img src="images/Avile Scott.jpg" alt=" Street Fighter Coach Avile">
-    <p>Coach Veigh – Game Strategy Mentor - Minecraft Specialist.</p>
-    <p>Receptionist & Street Fighter 6 Tutor.</p>
-  </div>
-  </div>
-  </section>
       <a href="rules.html" class="rules-btn">View Rules</a>
       <br>
       <hr style="margin: 2rem auto; width: 60%; border: 1px solid #444;">
       <br>
+
   <h3>Follow Us</h3>
 
     <div class="social-links">
@@ -181,45 +130,6 @@ minutes + " Minutes ";
     </div>
     <a href="https://maps.app.goo.gl/invBuUBdr1DM5GN28" target="_blank" class="google-link">View our Google Profile</a>
   </section>
-         
-  <section id="donate">
-  <h2>Support Esports Talent Community!</h2>
-    <p>Be part of growing esports in our community by purchasing a Supporter Pass.
-        Your contribution helps us cover event setup, gaming equipment,
-        and youth training programs, ensuring that our players have the best competitive experience possible.
-        Every pass purchased brings us one step closer to our shared vision.
-        Now you can securely make your payments for tournaments and membership here, please write your name as a reference.</p>
-
-    <p>🎮Choose your pass and help us grow local gaming talent.
-           Each tier contributes to our mission and comes with recognition as a valued supporter of LCAFE Esports.
-      <br>
-      <br>
-      🥉 Bronze Supporter – R50
-
-      Public acknowledgment on our social media
-
-      “Bronze Supporter” badge displayed at events
-
-      Priority updates on upcoming tournaments.
-      <br>
-      <br>
-      🥈 Silver Supporter – R100
-
-      All Bronze benefits
-
-      Access to behind-the-scenes tournament previews
-
-      Name listed on our event banners as a Silver Supporter.
-      <br>
-      <br>
-      🥇 Gold Supporter – R200
-
-      All Silver benefits
-
-      Complimentary VIP seating at our next major tournament
-
-      Personalized thank-you message from the LCAFE Esports team.<p>
-      <br>
 
   <h2>Scan the QR code below to complete your payment securely:</h2>
     <img src="images/WhatsApp1.jpg" alt="Scan to Pay with FNB" width="280" />
