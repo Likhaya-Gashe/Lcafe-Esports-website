@@ -37,8 +37,6 @@ body {
 header {
   text-align: center;
   padding: 0rem 1rem;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(6, 204, 39, 0.4);
   animation: flicker 1s infinite alternate;
 }
 
@@ -49,13 +47,11 @@ header h1 {
 }
 
 section {
-  max-width: 999px;
   margin: 2rem auto;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
   text-align: center;
-  
   color: #cfd3f1;
   text-shadow: 0 0 5px #0c19d4, 0 0 10px #0d0e0d;
   background: rgba(0, 0, 0, 0.6);
@@ -290,7 +286,6 @@ footer {
   padding: 2rem 1rem;
   margin-top: 0.3rem;
   color: #ccc;
-  background-color: #111;
   z-index: 1;
 }
 
@@ -567,5 +562,50 @@ footer {
   #membership button,
   #tournaments button {
     font-size: 14px;
+  }
+}
+
+gallery,
+previous-tournaments {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.gallery-grid,
+.tournament-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.gallery-item {
+
+}
+
+.highlight-img,
+.tournament-gallery img {
+
+  
+}
+
+.gallery-item p {
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .gallery-grid,
+  .tournament-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery-item {
+  
   }
 }
