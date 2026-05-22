@@ -48,30 +48,6 @@ header h1 {
   animation: flicker 1s infinite alternate;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 1rem;
-}
-
-nav a {
-  color: #080808;
-  color: var(--text-light);
-  padding: 10px 20px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  text-shadow: 0 0 5px #12e76b, 0 0 10px #fdfffd;
-  transition: background 0.4s ease, transform 0.3s ease;
-}
-
-nav a:hover {
-  background: rgba(199, 192, 192, 0.25);
-  transform: translateY(-3px) scale(1.05);
-}
-
 section {
   max-width: 999px;
   margin: 2rem auto;
@@ -79,14 +55,11 @@ section {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
   text-align: center;
-  transition: transform 0.4s ease;
+  
   color: #cfd3f1;
   text-shadow: 0 0 5px #0c19d4, 0 0 10px #0d0e0d;
   background: rgba(0, 0, 0, 0.6);
   border-top: 4px solid #00ffc3;
-  border-radius: 12px;
-  margin-top: 2rem;
-  box-shadow: 0 4px 12px rgba(0, 255, 195, 0.2);
 }
 
 section:hover {
@@ -442,32 +415,157 @@ footer {
   box-shadow:0 0 18px rgba(0,255,195,0.15);
 }
 
-.gallery{
-  max-width: 300px;
-  margin: 50px auto;
-  background: #1e1e1e;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 255, 135, 0.4);
+.tournament-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+}
+
+.tournament-gallery img {
+  width: 100%;
+  height: 180px;
+  border-radius: 12px;
+  border: 2px solid #00ffd9;
+  box-shadow: 0 0 12px rgba(0, 255, 217, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tournament-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 18px rgba(0, 255, 217, 0.5);
+}
+
+/* CONTACT - MEMBERSHIP - TOURNAMENT SECTIONS */
+
+#contact,
+#membership,
+#tournaments {
+  width: 90%;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px 25px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+/* HEADINGS */
+#contact h2,
+#membership h2,
+#tournaments h2 {
+  color: #31c4e9;
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+/* FORM */
+#contact form,
+#membership form,
+#tournaments form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* LABELS */
+#contact label,
+#membership label,
+#tournaments label {
+  width: 100%;
+  max-width: 500px;
+  text-align: left;
+  margin-bottom: 8px;
+  font-weight: 600;
   color: #fff;
 }
-.gallery :hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #00ffc8, 0 0 30px #00ffc8;
+
+/* INPUTS */
+#contact input,
+#membership input,
+#tournaments input,
+#contact textarea,
+#membership textarea,
+#tournaments textarea,
+#membership select,
+#tournaments select {
+  width: 100%;
+  max-width: 500px;
+  padding: 14px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 10px;
+  background: #0f172a;
+  color: white;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s ease;
 }
-.gallery ul {
-  list-style-type: disc;
-  padding-left: 80px;
-  padding-right: 80px;
-  text-align: center;
-  box-shadow: 0 0 20px #00ffc8, 0 0 30px #00ffc8;
-  border-radius: 16px;
-  margin-top: 20px;
-  padding: 16px 30px;
-  max-width: 999px;
+
+/* FOCUS EFFECT */
+#contact input:focus,
+#membership input:focus,
+#tournaments input:focus,
+#contact textarea:focus,
+#membership textarea:focus,
+#tournaments textarea:focus {
+  border: 2px solid #31c4e9;
+}
+
+/* TEXTAREA */
+#contact textarea,
+#membership textarea,
+#tournaments textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* BUTTONS */
+#contact button,
+#membership button,
+#tournaments button {
+  width: 100%;
+  max-width: 500px;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
   font-weight: 600;
-  font-size: 1.2rem;
-  background: rgba(255, 255, 255, 0.05);
-  color: #b6b4b4;
-  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* BUTTON HOVER */
+#contact button:hover,
+#membership button:hover,
+#tournaments button:hover {
+  background: #22a7c9;
+  transform: translateY(-2px);
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  #contact,
+  #membership,
+  #tournaments {
+    width: 92%;
+    padding: 25px 18px;
+  }
+
+  #contact h2,
+  #membership h2,
+  #tournaments h2 {
+    font-size: 1.6rem;
+  }
+
+  #contact input,
+  #membership input,
+  #tournaments input,
+  #contact textarea,
+  #membership textarea,
+  #tournaments textarea,
+  #contact button,
+  #membership button,
+  #tournaments button {
+    font-size: 14px;
+  }
 }
