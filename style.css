@@ -340,7 +340,6 @@ form[name="PayFastPayNowForm"]{
   max-width:280px;
   margin:20px auto;
   padding:15px;
-  background:rgba(0,0,0,0.65);
   border:1px solid rgba(0,255,195,0.25);
   border-radius:12px;
   box-shadow:0 0 15px rgba(0,255,195,0.15);
@@ -386,7 +385,7 @@ form[name="PayFastPayNowForm"] label{
 /* PAYFAST BUTTON */
 
 input[type="image"]{
-  width:140px;
+  width:120px;
   height:auto;
   margin-top:10px;
   border-radius:8px;
