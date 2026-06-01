@@ -2,135 +2,105 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>LCAFE Esports Tournament</title>
-    <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  </head>
-  <body>
-<header>
-  <img src="images/Logo.png" alt="LCAFE Logo" class="site-logo">
-  <h2>"Play, Compete & win!"</h2>
-  <nav>
-<header>
-
-  </body>
-<main>
- <!-- MENU BUTTON -->
-
-  <div class="menu-toggle" onclick="toggleMenu()">
-☰ MENU
-  </div>
-<!-- SIDEBAR -->
-
-  <div class="side-menu" id="sideMenu">
-    <a href="about.html" onclick="closeMenu()">About</a>
-    <a href="tournament.html" onclick="closeMenu()">Tournaments</a>
-    <a href="membership.html" onclick="closeMenu()">Membership</a>
-    <a href="games.html" onclick="closeMenu()">Games</a>
-    <a href="gallery.html" onclick="closeMenu()">Gallery</a>
-    <a href="team." onclick="closeMenu()">Team</a>
-    <a href="donate.html" onclick="closeMenu()">Donate</a>
-    <a href="contact.html" onclick="closeMenu()">Contact</a>
-  </div>
-
-<script>
-
-  const menu = document.getElementById("sideMenu");
-
-/* OPEN + CLOSE MENU */
-
-  function toggleMenu(){
-    if(menu.style.right === "12px"){
-    menu.style.right = "-220px";
-    }else{
-    menu.style.right = "12px";
-  }
-}
-/* CLOSE AFTER CLICK */
-  function closeMenu(){
-  menu.style.right = "-220px";
-}
-</script>
-<!-- HOME SECTION -->
-<section id="home">
-  <h2>Welcome to Our Esports Community</h2>
-    <p>Join us for exciting tournaments and connect with fellow gamers.</p>
-    <p>We are a pop-up-driven esports initiative focused on empowering youth in township communities through gaming.
-      Youth. Passion. Competition. Culture. Join us at LCAFE Esports!</p> 
-    </p>
-
-<!-- TOURNAMENT SECTION -->
-<section id="tournaments">
-  
-<!-- SMALL COUNTDOWN BOX -->
-  <div class="mini-countdown">
-  <span class="count-title">
-    NEXT TOURNAMENT
-  </span>
-  <div id="countdown"></div>
-
-
-<script>
-  const eventDate = new Date("Jun 16, 2026 10:00:00").getTime();
-  setInterval(function(){
-  const now = new Date().getTime();
-  const distance = eventDate - now;
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24))
-  / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60))
-  / (1000 * 60));
-  document.getElementById("countdown").innerHTML =
-  days + "D : " +
-  hours + "H : " +
-  minutes + "M";
-  },1000);
-</script>
-  </div>
-  <a href="https://maps.app.goo.gl/ix3dMPXRu9AGpx9v5" target="_blank" class="google-link">View our Google Profile</a>
-  <section id="gallery">
-    <div class="gallery-item">
-      <img src="images/EA FC26.png" alt="Tournament 1" class="highlight-img">
-      <p>
-        #16 June 2026 Tournament | 32 Players. 1 eChampion. Cash Prizes!
-      </p>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lcafe Esports — Compete. Conquer. Dominate.</title>
+  <meta name="description" content="Join the elite. Tournaments, membership, games and rules at Lcafe Esports." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- NAV -->
+  <header class="nav">
+    <a href="#top" class="logo">
+    <img src="images/Logo.png" alt="LCAFE Logo" class="nav-logo">
+    </a>
+    </a>
+    <div class="menu-wrap">
+      <button class="menu-btn" id="menuBtn">☰ <span>MENU</span></button>
+      <ul class="menu" id="menu">
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#tournaments">Tournaments</a></li>
+        <li><a href="#membership">Membership</a></li>
+        <li><a href="#games">Games</a></li>
+        <li><a href="#rules">Rules</a></li>
+        <li><a href="#contacts">Contacts</a></li>
+      </ul>
     </div>
-</section>
+  </header>
 
-  <br>
-    <a href="rules.html" class="rules-btn">View Rules</a>
-  <br>
+  <!-- HERO -->
+  <section id="top" class="hero">
+    <div class="hero-bg">
+      <div class="grid-anim"></div>
+      <div class="orb orb1"></div>
+      <div class="orb orb2"></div>
+      <div class="orb orb3"></div>
+      <div class="orb orb4"></div>
+    </div>
+    <div class="hero-content">
+      <span class="pill"><span class="dot"></span> SEASON 1 — LIVE NOW</span>
+      <h1>Welcome to <span class="glow">Lcafe</span><br />Esports</h1>
+      <p>Where legends rise and rivals fall. Compete in elite tournaments, sharpen your edge, and claim your throne.</p>
+      <div class="hero-cta">
+        <a href="#tournaments" class="btn btn-primary">Enter Arena</a>
+        <a href="#membership" class="btn btn-outline">Join Squad</a>
+      </div>
+    </div>
+  </section>
 
-  <h3>Follow Us:</h3>
+  <!-- TOURNAMENTS -->
+  <section id="tournaments" class="section tournaments">
+    <div class="container">
+      <div class="section-head center">
+        <p class="eyebrow">UPCOMING</p>
+        <h2>Next Tournament</h2>
+        <p class="muted">EA FC26 Championship — R1500,000 Prize Pool</p>
+      </div>
+      <div class="countdown" id="countdown">
+        <div class="cd-cell"><div class="cd-num" id="cdDays">00</div><div class="cd-lbl">Days</div></div>
+        <div class="cd-cell"><div class="cd-num" id="cdHours">00</div><div class="cd-lbl">Hours</div></div>
+        <div class="cd-cell"><div class="cd-num" id="cdMins">00</div><div class="cd-lbl">Minutes</div></div>
+        <div class="cd-cell"><div class="cd-num" id="cdSecs">00</div><div class="cd-lbl">Seconds</div></div>
+      </div>
+      <div class="tourney-grid">
+        <div class="t-card"><div class="t-icon">🏆</div><h3>EA FC26 Champions</h3><div class="t-meta"><span>Jun 16, 2026</span><span class="t-prize">R1500</span></div></div>
+        <div class="t-card"><div class="t-icon">🏆</div><h3>Lcafe eChampions League</h3><div class="t-meta"><span>Jul 02, 2026</span><span class="t-prize">R4000</span></div></div>
+    </div>
+  </section>
 
-  <br>
+  <!-- GALLERY -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">GALLERY</p>
+          <h2>Moments of Glory</h2>
+        </div>
+        <p class="muted">A glimpse into the arena — the thrills, the trophies, the brotherhood.</p>
+      </div>
+      <div class="gallery">
+                <div class="g-item g-tall"><img src="images/EA FC26.png" alt="Champions" /><span>Champions</span></div>
+        <div class="g-item g-big"><img src="images/Champions League.png" alt="Main Stage" /><span>Main Stage</span></div>
+      </div>
+    </div>
+  </section>
 
-  <div class="social-links">
-    <a href="https://wa.me/0615888596" target="_blank"><img src="images/WhatsApp.png" alt="WhatsApp" /></a>
-    <a href="https://www.tiktok.com/@lcafeesports" target="_blank"><img src="images/tiktok.png" alt="TikTok" /></a>
-    <a href="https://facebook.com/lcafe-esports" target="_blank"><img src="images/Facebook.png" alt="Facebook" /></a>
-    
-  </div>
-  
-    <a href="https://maps.app.goo.gl/invBuUBdr1DM5GN28" target="_blank" class="google-link">View our Google Profile</a>
-</section>
-  <br>
-  <h3>Scan the QR code below to complete your payment securely:</h3>
-  <br>
-    <img src="images/WhatsApp1.jpg" alt="Scan to Pay with FNB" width="200" />
-  <div class="card-icons">
-    <img src="images/Mastercard.png" alt="Mastercard" />
-    <img src="images/visa2.png" alt="Visa" />
-  </div>
-
-<script type="text/javascript">
-    function customQuantitiesPayFast (formReference) {
-    formReference['amount'].value = formReference['amount'].value * formReference['custom_quantity'].value;
-    return true;
-    }
-</script>
-
+  <!-- PAY -->
+  <section id="membership" class="section pay-section">
+    <div class="container pay-grid">
+      <div>
+        <p class="eyebrow">FOLLOW &amp; PAY</p>
+        <h2>Join the Movement</h2>
+        <p class="muted">Follow us across platforms for live drops, match updates, and exclusive content. Secure your membership with one tap.</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="WhatsApp">W</a>
+          <a href="#" aria-label="TikTok">TT</a>
+        </div>
+        <br>
+          <h1>Payment - Pay Fast</h1>
 <script type="text/javascript">
 
     function actionPayFastJavascript ( formReference ) {
@@ -174,13 +144,54 @@
     </td>
     </tr>
   </table>
-  </form>>
+  </form>
+      </div>
+      <div class="qr-card">
+        <div class="qr-head"><span>📱 Scan to Pay</span><span class="badge">SECURE</span></div>
+        <img src="images/WhatsApp1.jpg" alt="Scan to pay QR" />
+        <p class="muted small">Replace with your payment QR</p>
+      </div>
+    </div>
+  </section>
 
-  <footer>
-    <p>&copy; 2026 LCAFE Esports. All rights reserved.</p>
+  
+
+  <!-- MINI SECTIONS -->
+  <section class="section">
+    <div class="container mini-grid">
+      <div id="games" class="mini-card"><div class="t-icon">🎮</div><h3>Games</h3><p class="muted">Ea Fc 26 · Street Fighter 6 · Rocket League · Fortnite</p></div>
+      <div id="rules" class="mini-card"><div class="t-icon">📜</div><h3>Rules</h3><p class="muted">Fair play, zero tolerance for cheats, code of honor enforced.</p></div>
+      <div id="contacts" class="mini-card"><div class="t-icon">✉️</div><h3>Contacts</h3><p class="muted">hello@lcafe-esports WhatsApp · 061 588 8596</p></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-row">
+      <div class="logo"><span class="logo-bolt"></span><span class="logo-text">LCAFE ESPORTS</span></div>
+      <p class="muted">© 2026 Lcafe Esports. All rights reserved.</p>
+      <div class="foot-links"><a href="#rules">Rules</a><a href="#contacts">Contact</a></div>
+    </div>
   </footer>
-  <script type="module" src="scripts/firebase.js"></script>
-  <script src="script.js"></script>
-  </main>
-  </body>
+
+  <script>
+    // Menu toggle
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('menu');
+    btn.addEventListener('click', () => menu.classList.toggle('open'));
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
+
+    // Countdown — 14 days + 6 hours from page load
+    const target = Date.now() + (14 * 24 * 60 * 60 * 1000) + (6 * 60 * 60 * 1000);
+    function pad(n){ return String(n).padStart(2,'0'); }
+    function tick(){
+      const diff = Math.max(0, target - Date.now());
+      document.getElementById('cdDays').textContent = pad(Math.floor(diff/86400000));
+      document.getElementById('cdHours').textContent = pad(Math.floor(diff/3600000)%24);
+      document.getElementById('cdMins').textContent = pad(Math.floor(diff/60000)%60);
+      document.getElementById('cdSecs').textContent = pad(Math.floor(diff/1000)%60);
+    }
+    tick(); setInterval(tick, 1000);
+  </script>
+</body>
 </html>
