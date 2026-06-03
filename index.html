@@ -12,10 +12,9 @@
 </head>
 <body>
   <!-- NAV -->
-  <header class="nav">
+    <header class="nav">
     <a href="#top" class="logo">
     <img src="images/Logo.png" alt="LCAFE Logo" class="nav-logo">
-    </a>
     </a>
     <div class="menu-wrap">
       <button class="menu-btn" id="menuBtn">☰ <span>MENU</span></button>
@@ -49,6 +48,7 @@
       </div>
     </div>
   </section>
+
 
   <!-- TOURNAMENTS -->
   <section id="tournaments" class="section tournaments">
@@ -87,6 +87,8 @@
     </div>
   </section>
 
+
+
   <!-- PAY -->
   <section id="membership" class="section pay-section">
     <div class="container pay-grid">
@@ -96,55 +98,23 @@
         <p class="muted">Follow us across platforms for live drops, match updates, and exclusive content. Secure your membership with one tap.</p>
         <div class="socials">
           <a href="#" aria-label="Instagram">IG</a>
-          <a href="#" aria-label="WhatsApp">W</a>
           <a href="#" aria-label="TikTok">TT</a>
+          <a href="#" aria-label="Twitch">TW</a>
         </div>
         <br>
-          <h1>Payment - Pay Fast</h1>
-<script type="text/javascript">
-
-    function actionPayFastJavascript ( formReference ) {
-    let shippingValidOrOff = typeof shippingValid !== 'undefined' ? shippingValid : true; 
-    let customValid = shippingValidOrOff ? customQuantitiesPayFast( formReference ) : false;
-    if (typeof shippingValid !== 'undefined' && !shippingValid) {
-    return false;
-    }
-    if (typeof customValid !== 'undefined' && !customValid) {
-    return false;
-    }
-    return true;
-    }
-</script>
-
-  <form onsubmit="return actionPayFastJavascript( this );" name="PayFastPayNowForm" action="https://payment.payfast.io/eng/process" method="post">
-    <input required type="hidden" name="cmd" value="_paynow">
-    <input required type="hidden" name="receiver" pattern="[0-9]" value="31317909">
+        <h1>Pay with Pay Fast</h1>
+  <form action="https://payment.payfast.io/eng/process" method="post" target="_blank" class="payfast-form">
+    <input type="hidden" name="cmd" value="_paynow">
+    <input type="hidden" name="receiver" value="31317909">
+    <input type="hidden" name="amount" value="149.99">
+    <input type="hidden" name="item_name" value="Lcafe Esports — Season Membership">
+    <input type="hidden" name="item_description" value="One season membership to Lcafe Esports Arena">
     <input type="hidden" name="return_url" value="https://www.lcafe-esports.co.za">
     <input type="hidden" name="cancel_url" value="https://www.lcafe-esports.co.za">
     <input type="hidden" name="notify_url" value="https://www.lcafe-esports.co.za">
-  <table>
-    <tr>
-    <td><label id="PayFastAmountLabel" for="PayFastAmount">Amount: </label></td>
-    <td><input required id="PayFastAmount" type="number" step=".01" name="amount" min="5.00" placeholder="5.00" value="150"></td>
-    </tr>
-  </table>
-
-  <table>
-    <tr>
-    <td><label for="custom_quantity">Quantity: </label></td>
-    <td><input required id="custom_quantity" type="number" name="custom_quantity" value="1"></td>
-    </tr>
-  </table>
-    <input required type="hidden" name="item_name" maxlength="255" value="Membership and Tournament">
-    <input type="hidden" name="item_description" maxlength="255" value="Make secure payments via payfast integration.">
-    <table>
-    <tr>
-    <td colspan=2 align=center>
-  <input type="image" src="https://my.payfast.io/images/buttons/PayNow/Primary-Small-PayNow.png" alt="Pay Now" title="Pay Now with Payfast">
-    </td>
-    </tr>
-  </table>
+    <button type="submit" class="btn btn-primary pay-btn payfast-btn">PayFast - R149.99 / Tournament</button>
   </form>
+
       </div>
       <div class="qr-card">
         <div class="qr-head"><span>📱 Scan to Pay</span><span class="badge">SECURE</span></div>
@@ -154,14 +124,68 @@
     </div>
   </section>
 
-  
-
   <!-- MINI SECTIONS -->
   <section class="section">
     <div class="container mini-grid">
-      <div id="games" class="mini-card"><div class="t-icon">🎮</div><h3>Games</h3><p class="muted">Ea Fc 26 · Street Fighter 6 · Rocket League · Fortnite</p></div>
-      <div id="rules" class="mini-card"><div class="t-icon">📜</div><h3>Rules</h3><p class="muted">Fair play, zero tolerance for cheats, code of honor enforced, changes will be communicated.</p></div>
-      <div id="contacts" class="mini-card"><div class="t-icon">✉️</div><h3>Contacts</h3><p class="muted">hello@lcafe-esports.co.za · WhatsApp: 061 588 8596</p></div>
+      <div id="games" class="mini-card"><div class="t-icon">🎮</div><h3>Games</h3><p class="muted">EA FC 26· Apex · Street Fighter 6 · Rocket League · Fortnite</p></div>
+      <div id="rules" class="mini-card"><div class="t-icon">📜</div><h3>Rules</h3><p class="muted">Fair play, zero tolerance for cheats, code of honor enforced.</p></div>
+      <div id="contacts" class="mini-card"><div class="t-icon">✉️</div><h3>Contacts</h3><p class="muted">Email: Lcafe-esports.co.za · WhatsApp: 061 588 8596</p></div>
+    </div>
+  </section>
+
+  <!-- GAMES SHOWCASE -->
+  <section id="games-showcase" class="section games-showcase">
+    <div class="container">
+      <div class="section-head center">
+        <p class="eyebrow">FEATURED TITLES</p>
+        <h2>Our Games</h2>
+        <p class="muted">Compete across the hottest titles of the season.</p>
+      </div>
+      <div class="games-marquee">
+        <div class="games-track">
+          <article class="game-card" style="--g:#1ed760">
+            <div class="game-poster"><img src="images/game-fc26.jpg" alt="EA FC 26" /></div>
+            <h3>EA FC 26</h3>
+            <p class="muted small">Football. Reinvented.</p>
+          </article>
+          <article class="game-card" style="--g:#ff4655">
+            <div class="game-poster"><img src="images/game-sf6.jpg" alt="Street Fighter 6" /></div>
+            <h3>Street Fighter 6</h3>
+            <p class="muted small">World Warriors collide.</p>
+          </article>
+          <article class="game-card" style="--g:#00aef0">
+            <div class="game-poster"><img src="images/game-rl.jpg" alt="Rocket League" /></div>
+            <h3>Rocket League</h3>
+            <p class="muted small">Soccer meets driving.</p>
+          </article>
+          <article class="game-card" style="--g:#ffb400">
+            <div class="game-poster"><img src="images/game-fortnite.jpg" alt="Fortnite" /></div>
+            <h3>Fortnite</h3>
+            <p class="muted small">Build. Battle. Win.</p>
+          </article>
+          <!-- duplicate set for seamless loop -->
+          <article class="game-card" style="--g:#1ed760" aria-hidden="true">
+            <div class="game-poster"><img src="images/game-fc26.jpg" alt="" /></div>
+            <h3>EA FC 26</h3>
+            <p class="muted small">Football. Reinvented.</p>
+          </article>
+          <article class="game-card" style="--g:#ff4655" aria-hidden="true">
+            <div class="game-poster"><img src="images/game-sf6.jpg" alt="" /></div>
+            <h3>Street Fighter 6</h3>
+            <p class="muted small">World Warriors collide.</p>
+          </article>
+          <article class="game-card" style="--g:#00aef0" aria-hidden="true">
+            <div class="game-poster"><img src="images/game-rl.jpg" alt="" /></div>
+            <h3>Rocket League</h3>
+            <p class="muted small">Soccer meets driving.</p>
+          </article>
+          <article class="game-card" style="--g:#ffb400" aria-hidden="true">
+            <div class="game-poster"><img src="images/game-fortnite.jpg" alt="" /></div>
+            <h3>Fortnite</h3>
+            <p class="muted small">Build. Battle. Win.</p>
+          </article>
+        </div>
+      </div>
     </div>
   </section>
 
