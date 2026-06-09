@@ -1,57 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>LCAFE Esports Tournament</title>
-  <link rel="stylesheet" href="style.css" />
- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-  <header>
-    <img src="images/Logo.png" alt="LCAFE Logo" class="site-logo">
-    <h1>LCAFE ESPORTS</h1>
-    
-    </header>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact">
-      <h2>Enter Your Details.</h2>
-      <form onsubmit="submitMessage(event)">
-      <label for="contact-name">Name</label>
-      <input type="text" id="contact-name" required>
-
-      <label for="contact-email">Email</label>
-      <input type="email" id="contact-email" required>
-
-      <label for="subject">Subject</label>
-      <input type="text" id="subject" required>
-
-      <label for="message">Message</label>
-      <textarea id="message" required></textarea>
-
-      <button onsubmit="submit">Send Message</button>
-      </form>
-    </section>
-
-  <footer>
-  <p style="font-family: 'Poppins', sans-serif; font-size: 14px; color: #fff;">
-    📧 Email: 
-    <a href="mailto:info@lcafe-esports.co.za" 
-       style="color: #31c4e9ff; text-decoration: none; font-weight: 600;">
-       info@lcafe-esports.co.za
-    </a>
-  </p>
-  <br>
-  <p style="font-family: 'Poppins', sans-serif; font-size: 14px; color: #888;">
-    &copy; 2026 LCAFE Esports. All rights reserved.
-    <br>
-    <a href="index.html" class="back-home-btn">← Go Back Home</a>
-  </p>
-  </footer>
-
-
-  <script type="module" src="scripts/firebase.js"></script>
-  <script src="script.js"></script>
-</body>
-</html> 
+<form class="contact-form"
+      action="mailto:info@lcafe-esports.co.za"
+      method="post"
+      enctype="text/plain">
+  <div class="field"><label for="name">Name</label>
+    <input id="name" name="Name" type="text" required maxlength="100" /></div>
+  <div class="field"><label for="surname">Surname</label>
+    <input id="surname" name="Surname" type="text" required maxlength="100" /></div>
+  <div class="field"><label for="email">Email Address</label>
+    <input id="email" name="Email" type="email" required maxlength="255" /></div>
+  <div class="field"><label for="school">Name of School</label>
+    <input id="school" name="School" type="text" required maxlength="150" /></div>
+  <div class="field"><label for="contact">Contact Number / Email</label>
+    <input id="contact" name="Contact" type="text" required maxlength="100" /></div>
+  <button type="submit" class="btn-submit">Send Message</button>
+</form>
