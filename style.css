@@ -838,27 +838,6 @@ h1, h2 { font-family: 'Orbitron', sans-serif; letter-spacing: 0.02em; }
 }
 .form-note strong { color: #2ecc71; }
 
-.contact-info {
-  background: rgba(10, 30, 18, 0.6);
-  border: 1px solid rgba(46, 204, 113, 0.2);
-  border-radius: 16px; padding: 2rem; height: fit-content;
-}
-.contact-info h2 {
-  color: #2ecc71; font-size: 1.3rem; margin-bottom: 1.2rem;
-}
-.contact-info p {
-  margin-bottom: 0.9rem; color: #c8dcd0; line-height: 1.6;
-}
-.contact-info a { color: #2ecc71; text-decoration: none; }
-.contact-info a:hover { text-decoration: underline; }
-
-.contact-footer {
-  text-align: center; padding: 2rem 1rem;
-  border-top: 1px solid rgba(46, 204, 113, 0.2);
-  color: #8aa597; font-size: 0.9rem;
-}
-.contact-footer a { color: #2ecc71; text-decoration: none; display: block; margin-top: 0.5rem; }
-.contact-footer a:hover { text-decoration: underline; }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {

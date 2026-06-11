@@ -1,0 +1,197 @@
+/* LCAFE — Coaching & Mentoring */
+:root{
+  --primary:#4cff8a;
+  --primary-dark:#0f3d22;
+  --bg:#06110a;
+  --bg-2:#0a1d12;
+  --card:#0d2418;
+  --border:rgba(76,255,138,.18);
+  --text:#eaf7ee;
+  --muted:#9fb8aa;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Rajdhani',sans-serif;
+  background:radial-gradient(1200px 600px at 20% -10%,#0e3a22 0%,transparent 60%),
+             radial-gradient(900px 500px at 100% 20%,#0a2a18 0%,transparent 55%),
+             var(--bg);
+  color:var(--text);
+  min-height:100vh;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* Header */
+.cm-header{
+  position:sticky;top:0;z-index:50;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 28px;
+  background:rgba(6,17,10,.85);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+.cm-brand{
+  display:inline-flex;align-items:center;gap:10px;
+  color:var(--text);text-decoration:none;
+  font-family:'Orbitron',sans-serif;font-weight:800;letter-spacing:.18em;
+}
+.cm-bolt{color:var(--primary);font-size:1.2rem;text-shadow:0 0 12px var(--primary)}
+
+.cm-nav{display:flex;flex-wrap:wrap;align-items:center;gap:22px}
+.cm-nav a{
+  display:inline-flex;align-items:center;gap:8px;
+  color:#cfeedd;text-decoration:none;font-weight:600;font-size:.85rem;
+  text-transform:uppercase;letter-spacing:.08em;
+  transition:color .25s ease, transform .25s ease;
+}
+.cm-nav a svg{width:16px;height:16px;flex-shrink:0;stroke:currentColor}
+.cm-nav a:hover,.cm-nav a.active{color:var(--primary);transform:translateY(-1px)}
+
+/* Hero */
+.cm-hero{
+  text-align:center;
+  padding:80px 24px 40px;
+  max-width:900px;margin:0 auto;
+}
+.cm-eyebrow{
+  color:var(--primary);font-weight:700;
+  text-transform:uppercase;letter-spacing:.4em;font-size:.75rem;
+  margin-bottom:18px;
+}
+.cm-hero h1{
+  font-family:'Orbitron',sans-serif;
+  font-size:clamp(2.2rem,5vw,3.6rem);
+  font-weight:800;text-transform:uppercase;letter-spacing:.05em;
+  line-height:1.1;
+}
+.cm-hero h1 span{color:var(--primary);text-shadow:0 0 18px rgba(76,255,138,.5)}
+.cm-sub{
+  margin-top:18px;color:var(--muted);font-size:1.05rem;max-width:640px;
+  margin-left:auto;margin-right:auto;
+}
+
+/* Grid */
+.cm-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:28px;
+  max-width:1100px;margin:40px auto 80px;
+  padding:0 24px;
+  justify-items:center;
+  align-items:start;
+}
+
+/* Card */
+.cm-card{
+  width:100%;max-width:520px;
+  background:linear-gradient(180deg,var(--card) 0%,#081a10 100%);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:28px;
+  box-shadow:0 18px 50px -20px rgba(0,0,0,.7), 0 0 0 1px rgba(76,255,138,.04) inset;
+  transition:transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+}
+.cm-card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(76,255,138,.45);
+  box-shadow:0 25px 60px -20px rgba(0,0,0,.75), 0 0 30px -8px rgba(76,255,138,.25);
+}
+.cm-card-head{
+  text-align:center;
+  padding-bottom:18px;
+  border-bottom:1px dashed var(--border);
+  margin-bottom:22px;
+}
+.cm-card-head h2{
+  font-family:'Orbitron',sans-serif;
+  font-size:1.6rem;color:var(--primary);
+  text-transform:uppercase;letter-spacing:.15em;
+}
+.cm-card-head p{color:var(--muted);margin-top:6px;font-size:.95rem}
+
+/* List items */
+.cm-list{list-style:none;display:flex;flex-direction:column;gap:16px}
+.cm-list li{
+  position:relative;
+  background:rgba(255,255,255,.02);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:18px;
+  transition:transform .3s ease, background .3s ease, border-color .3s ease;
+}
+.cm-list li:hover{
+  transform:translateY(-2px);
+  background:rgba(76,255,138,.05);
+  border-color:rgba(76,255,138,.4);
+}
+.cm-featured{
+  background:linear-gradient(135deg,rgba(76,255,138,.10),rgba(76,255,138,.02)) !important;
+  border-color:rgba(76,255,138,.55) !important;
+}
+.cm-badge{
+  position:absolute;top:-10px;right:14px;
+  background:var(--primary);color:#04210f;
+  font-weight:700;font-size:.7rem;
+  padding:4px 10px;border-radius:999px;
+  text-transform:uppercase;letter-spacing:.12em;
+  box-shadow:0 6px 16px -4px rgba(76,255,138,.6);
+}
+.cm-row{
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+}
+.cm-info h3{
+  font-family:'Orbitron',sans-serif;font-size:1.05rem;
+  text-transform:uppercase;letter-spacing:.08em;
+}
+.cm-info p{color:var(--muted);font-size:.92rem;margin-top:4px}
+.cm-price{
+  font-family:'Orbitron',sans-serif;font-weight:800;
+  color:var(--primary);font-size:1.5rem;
+  text-shadow:0 0 10px rgba(76,255,138,.4);
+  white-space:nowrap;
+}
+
+/* Pay button */
+.cm-pay{margin-top:14px}
+.cm-btn{
+  display:block;width:100%;
+  background:linear-gradient(135deg,var(--primary) 0%,#27c466 100%);
+  color:#04210f;font-family:'Orbitron',sans-serif;
+  font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  font-size:.85rem;
+  border:none;border-radius:10px;
+  padding:12px 16px;cursor:pointer;
+  transition:transform .25s ease, box-shadow .25s ease, filter .25s ease;
+  box-shadow:0 10px 24px -10px rgba(76,255,138,.55);
+}
+.cm-btn:hover{
+  transform:translateY(-2px);
+  filter:brightness(1.08);
+  box-shadow:0 14px 30px -10px rgba(76,255,138,.75);
+}
+.cm-btn:active{transform:translateY(0)}
+
+/* Footer */
+.cm-footer{
+  text-align:center;padding:30px 20px 50px;
+  border-top:1px solid var(--border);
+  color:var(--muted);font-size:.9rem;
+}
+.cm-footer .cm-note{margin-top:8px;font-size:.78rem;opacity:.7}
+.cm-footer code{
+  background:rgba(76,255,138,.1);color:var(--primary);
+  padding:2px 6px;border-radius:4px;font-size:.78rem;
+}
+
+/* Responsive */
+@media (max-width:640px){
+  .cm-header{padding:12px 16px;flex-direction:column;gap:10px}
+  .cm-nav{gap:14px;justify-content:center}
+  .cm-hero{padding:50px 18px 20px}
+  .cm-grid{padding:0 16px;gap:20px;margin:24px auto 50px}
+  .cm-card{padding:22px}
+  .cm-row{flex-direction:column;align-items:flex-start;gap:8px}
+  .cm-price{font-size:1.35rem}
+}
