@@ -81,7 +81,7 @@
       </div>
       <div class="gallery">
                 <div class="g-item g-tall"><img src="images/Lcafe eChampion league.png" alt="Champions" /><span>11 July 2026</span></div>
-        <div class="g-item g-big"><img src="videos/WhatsApp Video.mp4" alt="Main Stage" /><span>Bracket</span></div>
+        <div class="g-item g-big"><img src="images/Chill and Play.png" alt="Main Stage" /><span>Players</span></div>
         <div class="g-item"><img src="images/gallery-2.jpg" alt="Crowd" /><span>Crowd</span></div>
         <div class="g-item"><img src="images/gallery-3.jpg" alt="Gear" /><span>Gear</span></div>
       </div>
@@ -184,8 +184,8 @@
     btn.addEventListener('click', () => menu.classList.toggle('open'));
     menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
 
-    // Countdown — June 16, 2026 at 10:00 AM
-    const target = new Date("2026-07-02T10:00:00").getTime();
+    // Countdown — July 11, 2026 at 10:00 AM
+    const target = new Date("2026-07-11T10:00:00").getTime();
     function pad(n){ return String(n).padStart(2,'0'); }
     function tick(){
       const diff = Math.max(0, target - Date.now());
